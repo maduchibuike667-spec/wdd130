@@ -1,0 +1,282 @@
+/* ==========================
+   Google Font
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+    width:90%;
+    margin:20px auto;
+    background:#d9d9d9;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+}
+
+nav{
+    display:flex;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    border:1px solid #555;
+    padding:12px 35px;
+    background:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#0b6e4f;
+    color:white;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero{
+    width:90%;
+    margin:20px auto;
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.hero h1{
+    position:absolute;
+    top:30px;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:48px;
+    text-shadow:2px 2px 10px black;
+}
+
+.hero article{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:40px;
+
+    width:85%;
+    background:rgba(255,255,255,.9);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px;
+    border-radius:8px;
+}
+
+.hero article p{
+    width:75%;
+}
+
+.hero article img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* ==========================
+   History
+========================== */
+
+.history{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+}
+
+.history h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+.history-content{
+    display:grid;
+    grid-template-columns:1fr 300px 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.history-content img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* ==========================
+   Gallery
+========================== */
+
+.gallery{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+}
+
+.gallery h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.gallery-grid figure{
+    text-align:center;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+.gallery-grid figcaption{
+    margin-top:10px;
+    font-weight:600;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    width:90%;
+    margin:40px auto;
+    background:#d9d9d9;
+    padding:20px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.socials{
+    display:flex;
+    gap:15px;
+}
+
+.socials img{
+    width:40px;
+    height:40px;
+    transition:.3s;
+}
+
+.socials img:hover{
+    transform:scale(1.2);
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero article{
+    position:static;
+    transform:none;
+    width:100%;
+    margin-top:20px;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero article p{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.history-content{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+footer{
+    flex-direction:column;
+    gap:20px;
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:24px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+}
+
+nav a{
+    padding:10px 20px;
+}
+
+}
